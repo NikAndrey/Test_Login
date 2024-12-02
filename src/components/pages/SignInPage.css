@@ -84,7 +84,7 @@
   background-color: #526ed3;
   height: 1080px;
   width: 945px;
-  background-image: url("../../../public/img/image_3.png"); /* Тут возможно нужно будет поменять путь на абсолютный от корня, без указания папки public*/
+  background-image: url("../../../public/img/image_3.png"); 
   background-position: center;
   background-size: cover;
   display: flex;
