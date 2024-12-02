@@ -53,25 +53,26 @@ const SignInForm = () => {
 
   const CustomTabs = styled(Tabs)({
     width: "436px",
+    height: "48px",
     color: "#A6ABB0",
     backgroundColor: "#F4F4F4",
     borderRadius: "8px",
     margin: "0 auto",
   });
 
-    const CustomTab = styled(Tab)(({ theme }) => ({
-      width: "210px",
-      height: "40px",
+  const CustomTab = styled(Tab)(({ theme }) => ({
+    width: "210px",
+    height: "40px",
+    borderRadius: "8px",
+    "&.Mui-selected": {
+      backgroundColor: "white",
+      color: "#101112",
       borderRadius: "8px",
-      "&.Mui-selected": {
-        backgroundColor: "white",
-        color: "#101112",
-        borderRadius: "150px",
-      },
-      "&:hover": {
-        backgroundColor: "#f0f0f0",
-      },
-    }));
+    },
+    "&:hover": {
+      backgroundColor: "#f0f0f0",
+    },
+  }));
 
   const [passwordCriteria, setPasswordCriteria] = useState({});
   const [showPassword, setShowPassword] = useState(false);
@@ -147,7 +148,13 @@ const SignInForm = () => {
             />
             <Typography
               variant="body2"
-              color={passwordCriteria.length ? "green" : "red"}
+              color={
+                passwordCriteria.length
+                  ? "green"
+                  : passwordCriteria.length === false
+                    ? "red"
+                    : "#A6ABB0"
+              }
             >
               {passwordCriteria.length
                 ? "✓ At least 8 characters"
@@ -155,7 +162,13 @@ const SignInForm = () => {
             </Typography>
             <Typography
               variant="body2"
-              color={passwordCriteria.number ? "green" : "red"}
+              color={
+                passwordCriteria.number
+                  ? "green"
+                  : passwordCriteria.number === false
+                    ? "red"
+                    : "#A6ABB0"
+              }
             >
               {passwordCriteria.number
                 ? "✓ Contains a number"
@@ -163,7 +176,13 @@ const SignInForm = () => {
             </Typography>
             <Typography
               variant="body2"
-              color={passwordCriteria.specialChar ? "green" : "red"}
+              color={
+                passwordCriteria.specialChar
+                  ? "green"
+                  : passwordCriteria.specialChar === false
+                    ? "red"
+                    : "#A6ABB0"
+              }
             >
               {passwordCriteria.specialChar
                 ? "✓ Contains a special character"
@@ -171,7 +190,13 @@ const SignInForm = () => {
             </Typography>
             <Typography
               variant="body2"
-              color={passwordCriteria.capitalLetter ? "green" : "red"}
+              color={
+                passwordCriteria.capitalLetter
+                  ? "green"
+                  : passwordCriteria.capitalLetter === false
+                    ? "red"
+                    : "#A6ABB0"
+              }
             >
               {passwordCriteria.capitalLetter
                 ? "✓ One or more capitalized letters"
