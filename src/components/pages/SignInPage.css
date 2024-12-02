@@ -1,0 +1,136 @@
+.page {
+  display: flex;
+  width: 1920px;
+  height: 1080px;
+  margin: 0 auto;
+  background-color: #f4f4f4;
+  font-family: "Inter", sans-serif;
+  color: #a6abb1;
+}
+
+@media (min-width: 1920px) {
+  .page {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1920px) and (min-width: 1441px) {
+  .page {
+    flex-direction: row;
+  }
+
+  .left-container,
+  .right-container {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 769px) {
+  .page {
+    flex-direction: row;
+  }
+
+  .left-container,
+  .right-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .right-container {
+    display: none;
+  }
+
+  .left-container {
+    flex: 1;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 975px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 904px;
+}
+
+.header {
+  height: 92px;
+}
+
+.logo {
+  width: 238px;
+  padding-top: 24px;
+  padding-left: 157px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 157px;
+  padding-right: 32px;
+  font-size: 14px;
+  line-height: 20px;
+  height: 84px;
+}
+
+.rigth {
+  position: relative;
+  background-color: #526ed3;
+  height: 1080px;
+  width: 945px;
+  background-image: url("../../../public/img/image_3.png"); /* Тут возможно нужно будет поменять путь на абсолютный от корня, без указания папки public*/
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.textRight {
+  color: white;
+  width: 751px;
+  height: 124px;
+  padding-top: 156px;
+  padding-left: 64px;
+}
+
+.titleRight {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 52px;
+}
+
+.descriptionRight {
+  font-size: 16px;
+  line-height: 24px;
+  width: 608px;
+}
+
+.chart {
+  width: 670px;
+  height: 580px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.ava {
+  width: 100px;
+}
+
+.ava-posOne {
+  position: absolute;
+  bottom: 533px;
+  right: 157px;
+}
+
+.ava-posTwo {
+  position: absolute;
+  bottom: 206px;
+  right: 624px;
+}
